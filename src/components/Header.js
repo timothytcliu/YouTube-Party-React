@@ -2,7 +2,7 @@ import React from "react";
 import { Jumbotron, Container, Row, Col } from "reactstrap";
 import logo from "../Images/templogo.jpg";
 
-function Header() {
+function Header(props) {
   return (
     <React.Fragment>
       <Jumbotron>
@@ -22,6 +22,7 @@ function Header() {
           <div> "" </div>
         </Col>
       </Row>
+      {props.hello ? <div>hello {props.hello.roomName}</div> : <div></div>}
     </React.Fragment>
   );
 }

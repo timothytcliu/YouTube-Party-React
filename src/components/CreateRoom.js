@@ -10,37 +10,13 @@ import Landing from "./Landing";
 class CreateRoom extends Component {
   constructor(props) {
     super(props);
-
-    this.state = {
-      roomName: "",
-      password: "",
-    };
-    this.handleInputChange = this.handleInputChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
   }
-
-  handleSubmit(event) {
-    console.log("Current state is: " + JSON.stringify(this.state));
-    alert("Current state is: " + JSON.stringify(this.state));
-    event.preventDefault();
-  }
-
-  handleInputChange(event) {
-    const target = event.target;
-    const value = target.value;
-    const name = target.name;
-
-    this.setState({
-      [name]: value,
-    });
-  }
-
   render() {
     return (
       <>
         <Header />
         <div className="row row-content justify-content-center">
-          <Form onSubmit={this.handleSubmit}>
+          <Form onSubmit={this.props.handleSubmit}>
             <FormGroup className="mt-5" row>
               <Label htmlFor="roomName">Room Name</Label>
               <Input
@@ -48,8 +24,8 @@ class CreateRoom extends Component {
                 id="roomName"
                 name="roomName"
                 placeholder="Room Name"
-                value={this.state.roomName}
-                onChange={this.handleInputChange}
+                value={this.props.roomName}
+                onChange={this.props.handleInputChange}
               />
             </FormGroup>
             <FormGroup row>
@@ -59,8 +35,8 @@ class CreateRoom extends Component {
                 id="password"
                 name="password"
                 placeholder="Password"
-                value={this.state.password}
-                onChange={this.handleInputChange}
+                value={this.props.password}
+                onChange={this.props.handleInputChange}
               />
             </FormGroup>
             <FormGroup>
