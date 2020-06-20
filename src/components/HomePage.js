@@ -3,6 +3,8 @@ import Landing from "./Landing";
 import CreateRoom from "./CreateRoom";
 import { Switch, Route } from "react-router-dom";
 import Room from "./Room";
+import CreateAccount from "./CreateAccount";
+import Login from "./Login";
 
 class HomePage extends Component {
   constructor(props) {
@@ -12,15 +14,13 @@ class HomePage extends Component {
       roomName: "",
       password: "",
     };
-    this.handleInputChange = this.handleInputChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   handleSubmit(event) {
     event.preventDefault();
   }
 
-  handleInputChange(event) {
+  handleInputChange = (event) => {
     const target = event.target;
     const value = target.value;
     const name = target.name;
@@ -28,7 +28,7 @@ class HomePage extends Component {
     this.setState({
       [name]: value,
     });
-  }
+  };
   render() {
     return (
       <>
@@ -49,6 +49,8 @@ class HomePage extends Component {
             path="/room"
             render={(props) => <Room data1={this.state} />}
           />
+          <Route exact path="/login" render={() => <Login />} />
+          <Route exact path="/createaccount" render={() => <CreateAccount />} />
         </Switch>
       </>
     );
