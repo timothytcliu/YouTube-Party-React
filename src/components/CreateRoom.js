@@ -1,16 +1,9 @@
-import React, { Component } from "react";
-import Header from "./Header";
-import { Button, Form, FormGroup, Label, Input } from "reactstrap";
-import { Link } from "react-router-dom";
-import { Switch, Route, Router } from "react-router-dom";
-import Room from "./Room";
-import HomePage from "./HomePage";
-import Landing from "./Landing";
+import React, { Component } from 'react';
+import Header from './Header';
+import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
+import { Link } from 'react-router-dom';
 
 class CreateRoom extends Component {
-  constructor(props) {
-    super(props);
-  }
   render() {
     return (
       <>
