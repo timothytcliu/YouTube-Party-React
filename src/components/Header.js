@@ -1,24 +1,33 @@
-import React from 'react';
-import { Jumbotron, Container, Row, Col, Button } from 'reactstrap';
-import logo from '../Images/templogo.jpg';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Jumbotron, Row, Col, Button } from "reactstrap";
+import logo from "../Images/templogo.jpg";
+import { Link } from "react-router-dom";
 
 function Header(props) {
   return (
     <React.Fragment>
       <Jumbotron>
-        <Container>
-          <Row>
-            <Col>
+        <div className="container">
+          <div className="row">
+            <div className="col col-lg-6">
               <Link to="/">
                 <img src={logo} alt="logo"></img>
               </Link>
               <h1>
                 YouTube <span>Party</span>
               </h1>
-            </Col>
-          </Row>
-        </Container>
+            </div>
+            <div id="roomName" className="col-lg-6">
+              {props.room ? (
+                <h2>
+                  Hello! Welcome to the <span> {props.room.roomName}</span> Room
+                </h2>
+              ) : (
+                <div></div>
+              )}
+            </div>
+          </div>
+        </div>
       </Jumbotron>
       <Row className="blackBar">
         <Col>
@@ -36,7 +45,6 @@ function Header(props) {
           </Link>
         </Col>
       </Row>
-      {props.hello ? <div>hello {props.hello.roomName}</div> : <div></div>}
     </React.Fragment>
   );
 }

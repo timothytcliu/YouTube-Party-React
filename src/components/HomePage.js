@@ -14,6 +14,9 @@ class HomePage extends Component {
       roomName: "",
       password: "",
     };
+
+    this.handleInputChange = this.handleInputChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   handleSubmit(event) {
@@ -41,13 +44,15 @@ class HomePage extends Component {
               <CreateRoom
                 handleInputChange={this.handleInputChange}
                 handleSubmit={this.handleSubmit}
+                roomName={this.state.roomName}
+                password={this.state.password}
               />
             )}
           />
           <Route
             exact
             path="/room"
-            render={(props) => <Room data1={this.state} />}
+            render={(props) => <Room roomData={this.state} />}
           />
           <Route exact path="/login" render={() => <Login />} />
           <Route exact path="/createaccount" render={() => <CreateAccount />} />

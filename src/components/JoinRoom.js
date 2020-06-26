@@ -1,6 +1,7 @@
 import React from "react";
 import { Button, Container, Row, Col } from "reactstrap";
 import { Link } from "react-router-dom";
+import Footer from "./Footer";
 
 function JoinRoom() {
   return (
@@ -24,6 +25,7 @@ function JoinRoom() {
           </Col>
         </Row>
       </Container>
+      <Footer />
     </>
   );
 }
