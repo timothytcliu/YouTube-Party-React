@@ -1,7 +1,7 @@
-import React from "react";
-import { Button, Container, Row, Col } from "reactstrap";
-import { Link } from "react-router-dom";
-import Footer from "./Footer";
+import React from 'react';
+import { Button, Container, Row, Col } from 'reactstrap';
+import { Link } from 'react-router-dom';
+import Footer from './Footer';
 
 function JoinRoom() {
   return (
@@ -19,9 +19,11 @@ function JoinRoom() {
                 Create a Room
               </Button>
             </Link>
-            <Button className="ml-3 mt-3" size="lg" color="danger">
-              Join a Room
-            </Button>
+            <Link to="/createroom">
+              <Button className="ml-3 mt-3" size="lg" color="danger">
+                Join a Room
+              </Button>
+            </Link>
           </Col>
         </Row>
       </Container>
