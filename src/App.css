@@ -28,7 +28,7 @@ img {
 
 @media only screen and (max-width: 991px) {
   .jumbotron {
-    height: 160px;
+    height: 225px;
   }
   #roomName {
     margin-top: 2rem;
