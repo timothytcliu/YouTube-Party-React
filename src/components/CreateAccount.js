@@ -100,7 +100,7 @@ class CreateAccount extends React.Component {
       <>
         <Header />
         <div className="d-flex justify-content-center mt-5 mb-2">
-          <h2>Create an Account</h2>
+          <h3>Create an Account</h3>
         </div>
         <div className="d-flex justify-content-center mt-3">
           <GoogleApiButton />

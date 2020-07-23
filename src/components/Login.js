@@ -89,7 +89,7 @@ class Login extends React.Component {
       <>
         <Header />
         <div className="d-flex justify-content-center mt-5 mb-2">
-          <h2>Login</h2>
+          <h3>Login</h3>
         </div>
         <div className="d-flex justify-content-center mt-3">
           <GoogleApiButton />

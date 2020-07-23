@@ -35,7 +35,7 @@ class HomePage extends Component {
   render() {
     return (
       <>
-        <Switch>
+        <Switch className="body">
           <Route exact path="/" render={() => <Landing />} />
           <Route
             exact

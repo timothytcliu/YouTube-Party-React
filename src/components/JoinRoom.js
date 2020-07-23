@@ -9,7 +9,7 @@ function JoinRoom() {
       <Container>
         <Row>
           <Col align="center">
-            <h2 className="mt-4">Time to Party!</h2>
+            <h3 className="mt-4">Time to Party!</h3>
           </Col>
         </Row>
         <Row>
