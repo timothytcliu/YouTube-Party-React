@@ -1,18 +1,18 @@
-import React, { Component } from "react";
-import Landing from "./Landing";
-import CreateRoom from "./CreateRoom";
-import { Switch, Route } from "react-router-dom";
-import Room from "./Room";
-import CreateAccount from "./CreateAccount";
-import Login from "./Login";
+import React, { Component } from 'react';
+import Landing from './Landing';
+import CreateRoom from './CreateRoom';
+import { Switch, Route } from 'react-router-dom';
+import Room from './Room';
+import CreateAccount from './CreateAccount';
+import Login from './Login';
 
 class HomePage extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      roomName: "",
-      password: "",
+      roomName: '',
+      password: '',
     };
 
     this.handleInputChange = this.handleInputChange.bind(this);
@@ -23,7 +23,7 @@ class HomePage extends Component {
     event.preventDefault();
   }
 
-  handleInputChange = (event) => {
+  handleInputChange = event => {
     const target = event.target;
     const value = target.value;
     const name = target.name;
@@ -35,12 +35,12 @@ class HomePage extends Component {
   render() {
     return (
       <>
-        <Switch>
-          <Route exact path="/" render={() => <Landing />}></Route>
+        <Switch className="body">
+          <Route exact path="/" render={() => <Landing />} />
           <Route
             exact
             path="/createroom"
-            render={(props) => (
+            render={props => (
               <CreateRoom
                 handleInputChange={this.handleInputChange}
                 handleSubmit={this.handleSubmit}
@@ -52,7 +52,7 @@ class HomePage extends Component {
           <Route
             exact
             path="/room"
-            render={(props) => <Room roomData={this.state} />}
+            render={props => <Room roomData={this.state} />}
           />
           <Route exact path="/login" render={() => <Login />} />
           <Route exact path="/createaccount" render={() => <CreateAccount />} />

@@ -18,7 +18,7 @@ img {
 }
 
 .blackBar {
-  background-color: black;
+  background-color: #121212;
   height: 30px;
 }
 
@@ -28,7 +28,7 @@ img {
 
 @media only screen and (max-width: 991px) {
   .jumbotron {
-    height: 260px;
+    height: 225px;
   }
   #roomName {
     margin-top: 2rem;
@@ -36,7 +36,7 @@ img {
 }
 
 .site-footer {
-  background-image: linear-gradient(white, #ff4136);
+  background-image: linear-gradient(#262833, #ff4136);
   padding: 20px 0px;
   position: fixed;
   bottom: 0;
@@ -70,4 +70,15 @@ a:hover {
 
 html {
   overflow-y: scroll;
+}
+
+Label,
+h3,
+th,
+td {
+  color: white;
+}
+
+div.disabled {
+  overflow-x: hidden;
 }
