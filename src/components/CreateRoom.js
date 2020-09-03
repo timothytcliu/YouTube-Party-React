@@ -66,7 +66,6 @@ class CreateRoom extends Component {
   render() {
     const errors = this.validate(this.props.roomName, this.props.password);
     const allowSubmit = errors.i === 1 ? true : false;
-    console.log(errors);
 
     return (
       <>
