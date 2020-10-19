@@ -37,6 +37,7 @@ class HomePage extends Component {
       <>
         <Switch className="body">
           <Route exact path="/" render={() => <Landing />} />
+          <Route exact path="/YouTube-Party-React" render={() => <Landing />} />
           <Route
             exact
             path="/createroom"
