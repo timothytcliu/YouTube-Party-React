@@ -1,7 +1,7 @@
 # YouTube Party
 
 ## Link to live app
-[Link here] (https://timothytcliu.github.io/YouTube-Party-React/)
+[Link here](https://timothytcliu.github.io/YouTube-Party-React/)
 
 ## note: current build is not connected to YouTube API.
 
